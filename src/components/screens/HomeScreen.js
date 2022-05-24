@@ -26,7 +26,7 @@ function HomeScreen() {
                 error ? (<h1> Something Went wrong !</h1>) :
                 (
                     products.map((products,index) => {
-                        return <div className='col-md-3 m-2 p-2' key={index}> 
+                        return <div className='col-md-3 m-2 p-2 card' key={index}> 
                             <Product product={products} />
                         </div>
                     })
