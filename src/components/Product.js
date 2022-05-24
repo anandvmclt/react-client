@@ -8,7 +8,7 @@ function Product({ product }) {
 
         <div className="text-left">
             <div>
-                <Link to={`/product/${product.id}`}> 
+                <Link to={`/product/${product._id}`}> 
                 <img src={product.image} className='img-fluid' />
                 <h1> {product.name} </h1>
                 <Rating style={{color:'orange'}}
