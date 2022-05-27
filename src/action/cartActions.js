@@ -1,4 +1,4 @@
-export const addTocart = (product, quantity) => dispatch => {
+export const addTocart = (product, quantity) => (dispatch, getState) => {
     
     const cartItems = {
         name : product.name,
@@ -9,4 +9,10 @@ export const addTocart = (product, quantity) => dispatch => {
     }
 
     dispatch({type:'ADD_TO_CART', payload : cartItems})
+
+    localStorage.setItem('cartItems', JSON.stringify(getState().addTocartReducer.cartItems))
+}
+
+export const deleteFromCart=(item) => dispatch => {
+    dispatch({type:'DELETE_FROM_CART', payload:item})
 }
