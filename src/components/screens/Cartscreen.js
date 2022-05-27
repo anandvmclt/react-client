@@ -4,15 +4,15 @@ import { useState, useDispatch, useSelector } from 'react-redux'
 import { addTocart, deleteFromCart } from '../../action/cartActions'
 
 function Cartscreen() {
-    const cartreducerstate = useSelector(state => state.addTocartReducer)
+    const cartreducerstate = useSelector(state => state.cartReducer)
     const dispatch = useDispatch()
     const {cartItems} = cartreducerstate
-   
+   var subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0)
   return (
     <div>
         <div className='row mt-2 justify-content-center'>
 
-        <div className='col-md-8'>
+        <div className='col-md-8 card'>
                 <h1 className='text-center m-5'>My Cart </h1>
                 <table className='table table-bordered'>
                     <thead> 
@@ -41,16 +41,23 @@ function Cartscreen() {
                                     </select> </td>
                                 <td>{item.price * item.quantity} </td>
                                 <td><i className='far fa-trash-alt'
-                                 onClick={dispatch(deleteFromCart(item))}> </i> </td>
+                                onClick={()=>{dispatch(deleteFromCart(item))}} > </i> </td>
                             </tr>
                         })}
                     </tbody>
                 </table>
-
-            </div>
+                        <hr/>
+                        <h6 className='text-center'>Sub Total : ₹ {subtotal} INR </h6>
+                        <hr/>
+                        <div className='text-center p-3'>
+                        <button className='btn'> PAY NOW</button>
+                        </div>
+                        </div>
+                        
         </div>
     </div>
   )
 }
 
 export default Cartscreen
+//onClick={dispatch(deleteFromCart(item))}

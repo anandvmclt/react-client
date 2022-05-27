@@ -2,8 +2,8 @@ import React from 'react'
 import {useDispatch , useSelector}  from 'react-redux';
 
 export default function Navbar() {
-    const addtocartreducer = useSelector(state => state.addTocartReducer)
-    const { cartItems} = addtocartreducer;
+    const cartreducer = useSelector(state => state.cartReducer)
+    const { cartItems} = cartreducer;
     return (
         <div>
             <nav className="navbar navbar-expand-lg">

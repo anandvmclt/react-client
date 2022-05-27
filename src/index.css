@@ -29,6 +29,11 @@ h1{
   color: black !important;
 }
 
+h6{
+  font-size: 25px !important;
+  font-weight: bold !important; 
+  color: black !important;
+}
 .img-fluid{
   height: 200px !important;
 } 
@@ -40,4 +45,9 @@ h1{
 
 p{
   text-align: left;
+}
+.btn {
+  background-color: black !important;
+  color: white !important;
+  width: 200px0 !important;
 }
