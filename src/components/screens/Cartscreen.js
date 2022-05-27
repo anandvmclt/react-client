@@ -23,7 +23,6 @@ function Cartscreen() {
                         <th>Quanitiy </th>
                         <th>Total Amount </th>
                         <th>Delete </th>
-
                     </tr>
                     </thead>
                     <tbody>

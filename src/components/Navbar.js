@@ -21,7 +21,7 @@ export default function Navbar() {
 
 
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Login</a>
+                                <a className="nav-link" aria-current="page" href="/login">Login</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/cart">
