@@ -7,6 +7,7 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import {Provider} from 'react-redux';
 import store from './store';
 import { render } from "react-dom";
+import 'bootstrap/dist/js/bootstrap.js';
 
 // const root = document.getElementById("root");
 // render(<App />, root);
