@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import {useDispatch} from 'react-redux';
 import {loginUser} from '../../action/userActions';
 
@@ -18,8 +18,14 @@ function LoginScreen() {
         } else {
             alert("Passwords Do not match");
         }
-
     };
+    
+    useEffect(() => {
+        if (localStorage.getItem('currentUser')) {
+            window.location.href = "/"
+        }
+    },[])
+
     return (
         <div>
             <div className='row justify-content-center'>

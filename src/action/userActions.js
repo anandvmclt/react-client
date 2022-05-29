@@ -21,8 +21,10 @@ export const loginUser = (user) => dispatch => {
 
     axios.post("/api/user/login", user)
     .then(res =>{
+        localStorage.setItem('currentUser', JSON.stringify(res.data))
         dispatch({type: 'USER_LOGIN_SUCCESS'})
-        console.log(res);
+        window.location.href = "/"
+        
     })
     .catch(err => {
         console.log(err);
