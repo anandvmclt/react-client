@@ -9,7 +9,9 @@ function Product({ product }) {
         <div className="text-left">
             <div>
                 <Link to={`/product/${product._id}`}> 
+                <div className='text-center'> 
                 <img src={product.image} className='img-fluid' />
+                </div>
                 <h1> {product.name} </h1>
                 <Rating style={{color:'orange'}}
                 initialRating={product.rating}

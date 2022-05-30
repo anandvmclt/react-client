@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { getProductById } from '../../action/productAction';
 import { addTocart } from '../../action/cartActions';
+import Loader from '../Loader';
+import Errors from '../Errors';
 
 
 function ProductdescSreen({ match }) {
@@ -20,8 +22,8 @@ function ProductdescSreen({ match }) {
 
     return (
         <div>
-              {loading ? <h1> Loading ... </h1> :
-                error ? (<h1> Something Went wrong !</h1>) :
+              {loading ? <Loader/> :
+                error ? <Errors error = "Something went wrong" /> :
                 (
             <div className='row mt-5'>
                 <div className='col-md-6'>

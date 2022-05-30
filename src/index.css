@@ -36,6 +36,7 @@ h6{
 }
 .img-fluid{
   height: 200px !important;
+  text-align: center !important;
 } 
 
 .bigimg{
